@@ -15,6 +15,7 @@ worlds/<w>/gm/
                     Movement (the current handful) · Horizon (attractors, never endings).
   poetics.md        the back room's own credo of what makes THIS story good — cited to
                     scenes, ⭐ lines, margins, and Hannu's feedback, or it doesn't count.
+                    Seeded from engine/POETICS.md; outgrow it.
   journal.md        one entry per scene: engine config, what worked at the table,
                     feedback verbatim, emotional registers hit (the range ledger).
   ledger.md         back-room decisions — what changed and why. Auditable anytime.
@@ -33,7 +34,7 @@ Runs in the background after each distill's diffs are approved (or on `prep`). R
    - **poetics** — fit to the credo.
    - **emotion** — force and range against the journal's register ledger; flag monotone (tenderness counts). Peril is in-bounds by ruling (ledger 2026-07-09). Owed registers are paid in their native window — never alongside a countdown; a held beat is a debt with one renewal.
    - **momentum** — after this scene, does the next one want to exist? Which threads advance, which get sown?
-4. **Revise.** One or two rounds on the winner; keep the runner-up as the spare.
+4. **Revise.** One or two rounds on the winner; keep the runner-up as the spare. Braiding often wins: a floor setup strung with the runner-up's best beats.
 5. **Brief.** Write `briefings/NNN.md`: tonight's situation · NPC intents with whys · prepared answers that price the player's likely inventions rather than walling them (the third path is the norm — prepare the resistance, not the route) · images and complications ready to hand · texture kit (names in the local register, sensory palette) · tripwires · the spare setup · **notes to the table** (Hannu's feedback, actioned: style points to `voice.md`, behavior lands here).
 
 A harness without subagents plays every role in sequence — critic independence becomes separate passes, weaker but honest. The cycle stays legible in plain Markdown either way.

@@ -4,6 +4,15 @@ Versioned snapshots of the shared instrument. The engine keeps evolving at the
 private table; each tagged version here is a coherent, playable whole. Sealed
 material (`worlds/*/gm/`, mode-B character interiors) is never included.
 
+## v0.1.1 — 2026-07-18
+
+- `engine/POETICS.md`: the seed credo — transferable story-craft principles
+  earned in the first world's play; a new world's `gm/poetics.md` starts from
+  it instead of from nothing.
+- `engine/BACKROOM.md`: the revise step notes the braiding method; the
+  per-world credo is seeded from the engine credo.
+- Repository made public (unadvertised).
+
 ## v0.1.0 — 2026-07-18
 
 First shared snapshot.
