@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sefer-Qenát — The Codex of Degrees (Impression)</title>
+<style>
+@font-face{ font-family:"Qenah"; src:url(data:font/ttf;base64,AAEAAAAKAIAAAwAgT1MvMkTERCAAAAEoAAAAYGNtYXABiAIUAAACHAAAAGZnbHlm1WvH9gAAAtAAABMCaGVhZC81u9IAAACsAAAANmhoZWEGdAMaAAAA5AAAACRobXR4UvQGSgAAAYgAAACUbG9jYVMAV3cAAAKEAAAATG1heHAALACqAAABCAAAACBuYW1l2SH7wwAAFdQAAAF9cG9zdALkAtYAABdUAAAAbAABAAAAAQAA/ogIDF8PPPUAAwPoAAAAAOZSPE0AAAAA5lI8TQAu/3kDTALfAAAAAwACAAAAAAAAAAEAAAL4/0wAAAN6AC4ALgNMAAEAAAAAAAAAAAAAAAAAAAAlAAEAAAAlAKgABgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwI+AZAABQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAPz8/PwAAACAAWgL4/0wAAAL4ALQAAAAAAAAAAAAAAAAAAAAgAAACWAAAAtoALgJyAC4CeQAuAqEALgJXAC4CSAAuAv8ALgLWAC4BKAAuAccALgKrAC4CQwAuA2wALgLqAC4C6gAuAlMALgLpAC4CvwAuAgsALgJQAC4CgQAuApwALgN6AC4CmwAuAm0ALgJdAC4A2AAuAP8ALgFgAC4A1AAuANgALgFWAC4COgAuAjQALgKAAC4BLAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABABSAAAADAAIAAIABAAhAC4AMwA6AFr//wAAACAALAAwADoAQf//AAAAAAAA/+T/wAABAAwADgASAAAAAAAAACQAHwAcAB0AGwAjACAAIQAiAAAAAAAAAB4AvQEiAXsBoQHBAjcCXgJwAo0CsQLKAvwDJQOvBAgEmQT7BSkFRAWcBbQF3AX1BhkGNwZ/Bs4G2wdmB7cH0Qg3CPcJgQmBAAMALv/qAqwCxgADAAcACwAAFxMnASEBBxMlITUhpOU4/t0Cfv7dOOX+oQEs/tQWAsgU/VACsBT9OKtwAAQALv/BAkQC3QADAAcARwCHAAAzAyMDIzM1IxMfDRUPDhcxFz8OLw4DHw0VDw4XMRc/Di8O0yE8ISfMzGUiISAfHRsZFhMPDAkFAwIEBwoMEBMVGBscHh8gIQEBJSUlJCIgHxwZFxMPDAcBAwkNEBQXGRweHyIiJCQkAiYkIyIgHhsYFBAMCAUCAgMFCQ0QFBcbHR8iIiQmAgIoKiooJiUiIR0aGBMPCQIEChAUFxsdICIkJigoKSkCvP1EHgKDAQMFBgkKCw0NDg4NDQwLCwoMCwwMCwsKCAcGBAMBMTEBAwYHCgwNEBITFRgYGhsaGRcVFBEQDgwKCQYFAwH+VgEDBAcICgsMDA0MDAoIBgYHCQkLDAsKCgkHBgQDAT8/AQMGBwoLDg8SFBcZGx4fHx0aFxUSEQ4NCgkHBQMBAAEALv/WAksCxwBTAAABLwQPDx8NMz8EJw8EIy8OPw4fBAI8HSEiIiMjIyIhIB8dGhgWEhAMCAUBAwYLDhIVGRsfISMkJicmJiYkIhRBEBcYFxgZGBgXFxYVExMQDwwKCAUCAQMHCQwOERQVGBgaGxwcGxwaGRoCkxEOCwcDAQQIDBATFhkdHiEkJCYnJygmJyQkIR4cGBURDAkDBgkOEg5nCgsJBgMCBQgKDQ8SFBYYGRwcHR4eHh0dGxoYFhMQDgsHBAEDBgoNEAADAC7/wQJzAtoAAwAHAEcAADMDIwMjMzUjEx8NFQ8OFzEXPw4vDtMhPCEnzMxlKyopJyUjHxwYFRAMCQQEBwsPEhYYHB4hIyUmJysDAy8yMS8tKygkIBsXEgwGAQQKDxQZHCEjJykrLS4vLwK8/UQeAoACBgkNERMWGRscHh4fHh8eHR0cGhkXFRMRDgsIBQI/PwIHChATFxsfISUnKSorKyspKCYkIR4cFxURDQkGAgAABQAu/9MCKQLKAAMABwALAA8AEwAAMwMjAyMzNSMTITUhESE1IREhNSHTITwhJ8zMZgGQ/nABXv6iAZX+awK8/UQeAm4+/mNi/kR+AAQALgAAAhoCygADAAcACwAPAAAzAyMDIzM1IxMhNSERITUh0yE8ISfMzGYBhv56AVn+pwK8/UQeAm4+/npgAAADAC7/1QLRAscAVQBZAF0AAAEvBQ8OHw4/BScPBS8PPw0fBQMzNSMBAyMDAksdICEiIiMjIyIgIB0cGhYUEQ4KBwMBBAkMEBQXGh0gIiQlJicmJiUjIRRHDxcXFxgZGBgXGBYWFBMREA0LCQcDAQIFCAoOEBIUFxgZGxscHBsbGhgZZ9fXARQMYgsCiRIQDQkFAQIHCg4RFBgbHiAiJCUmKCcnJyUkIx8eGhYTDwoGAgMIDBAUDmMKDQoHBAIBAwcIDA4QExUXGRscHB4eHh4dHBoZFxUSDwwJBQMBBQgLDhL+32L+wQEO/vIAAAUALgAAAqgCvAADAAcACwAPABMAADMDIwMjMzUjBQMjAyMzNSMBITUh0yE8ISfMzAJTITwhJ8zM/rgBrv5SArz9RB4eArz9RB4BD2IAAAIALgAAAPoCvAADAAcAADMDIwMjMzUj0yE8ISfMzAK8/UQeAAEALv/cAZkCvAANAAABAw8CJycHFxc/AgMBQxkLFSouJV8+fHY1BhoCvP4YSiAOCS1IVRkoYmoB7AAEAC7/zwJ9AtMAAwAHAAsADwAAMwMjAyMzNSMTAScBFQE3AdMhPCEnzMyPAZgm/lABsE7+QAK8/UQeARwBay7+s0z+lWIBVQADAC7/0wIVArwAAwAHAAsAADMDIwMjMzUjFyE1IdMhPCEnzMxmAYH+fwK8/UQeS34AAAYALgAAAz4CwwADAAcACwAPABMAFwAAMwMjAyMzNSMFAyMDIzM1IwEBNwEhARcB0yE8ISfMzALpITwhJ8zM/gkBDlr+ywIR/spaAQ8CvP1EHh4CvP1EHgKD/js8Aav+VTwBxQAFAC7/3gK8AswAAwAHAAsADwATAAAzAyMDIzM1IwUDIwMjMzUjAQE3AdMhPCEnzMwCZyE8ISfMzP6LAaZq/iICvP1EHh4CvP1EHgKO/TJEAqoAAgAuAAsCvAKWADsAdwAAAS8ODw4VHw0/DScPDS8ONT8NHw0VArwDBwoNERMWGBscHR8gICEhICAeHhwaGRYTEA4KBwMECAsPEhYYGx0gICMjIyQjIiEfHRsZFRIPCwgEZQUHCgsODxESFBQWFhYXFxYWFRUUEhEPDQwKBwUDAgUICgwPERMUFxcZGRkaGRgYFhUTEA8NCgcFAgFeIiEhHx0bGRcUEQ4MCAUBAQUIDA4RFBcZGx0fISEiIiMhISAeHBkXFBANCQYCAgYJDRAUFxkcHiAhISMKFxYWFBMREA4MCggFBAEBBAUICgwOEBETFBYWFxgYGBgXFxYUEhEODAoHBAICBAcKDA4REhQWFxcYGBgAAwAuAAACJQLaAAMABwBHAAAzAyMDIzM1IxMfDRUPDhcxFz8OLw7TITwhJ8zMZSUkIiIfHhoYFRENCQYDAwQHCg4RFBgaHB8hISMkAQEnKCcmJSIgHhsYFREMCAIECQ4SFRgbHh8iJCUmJyYCvP1EHgKAAQMFBwgKDA0NDw4ODAwLCgsLDAwMDAsKCAgGBAIBMjIBBAUICgsOEBEUFRgZGxsbGRgVFBEQDgwKCQYFAwEAAAMALv/cArsCoAA7AHcAewAAAS8ODw4VHw0/DScPDS8ONT8NHw0VBxc3JwK7AwcKDRETFhgaHR0fICAgISAgHx0cGxgWExAOCgcDBAgLDxIWGBsdHyEiIyQjIyIhHx4aGRUSDwsIBGQFBwoLDg8RExMVFRYXFhcXFhUVExMQEA0MCgcFAwIFCAoMDxETFBcXGRkaGRkZFxcUExEPDQoHBQLj0lXbAWgiISEeHhsZFxQRDgsIBQICBQgLDhEUFxkbHh4hISIiIiIhIB0cGhYUEQ0JBgICBgkNERQWGhwdICEiIgoXFxUUExIPDgwKCAYDAQEDBggKDA4PEhMUFRcXGBgYGBgWFhQTEA8MCgcEAQEEBwoMDxATFBYWGBgYGL/NXMMABAAu/9kCkQLaAAMABwBHAEsAADMDIwMjMzUjEx8NFQ8OFzEXPw4vDhMBNwHTITwhJ8zMZSIgIB4dGhkVEw8MCAUDAgUGCgwPExUXGhwdHx8hAQEkJSUjISAfGxkXEw8LBwEDCQwRExYZHB0gICMjJCONAQ1i/t0CvP1EHgKAAQMFBgkKCw0NDg4NDQwLCwsLCwwMCwsKCAcGBAMBMTEBAwUICgwNEBITFhcZGhoaGRcVFBEQDgwKCQYFAwH+Y/6cTgFUAAEALv/QAd0C0AAbAAABJycHBx8EDwInBxc/Ai8ENzcXFwHBWnp5RS54Ly82D0VIWUZ7on4UZTo0aR4fT1NFAlVgGyl1eU8nJEZGPQY9YlsOe6JuKCU9O0MfFVgAAwAuAAACIgLKAAMABwALAAATITUhAQMjAyMzNSMuAfT+DAE5ITwhJ8zMAow+/TYCvP1EHgAAAQAu/9UCUwK8AEUAABMTFycfDT8NNTUDIwM1Dw0jIy8NFxNGHgI4BAYKDRASFBcYGhwcHR0eHB0bGhkWFRIQDAoHBBk8GAIEBQcICQsMDQ8PDxARERAREBAPDg0MCwoIBgUEOgEeArz+KjcbHBsbGhgWFBIQDQoIBAICBAgKDRASFBYYGhsbHBkDAdb+KgMTDw8PDQ0MCwkJBwUEAwMEBQcJCQsMDQ0PDw9HNwHWAAACAC4ABwJuAscAAwAHAAATEzcBIQEXEy7mdP7eAdD+3nTmArH9Vi4Ckv1uLgKqAAAEAC4ABwNMAsMAAwAHAAsADwAAExM3AxMTJwMTEzcDExMnAy6LecrHs0ne3rJ03eCKOskCtf1aHgKW/UQCBxz+CwHZ/fkuAfX95QKmDv1qAAIALv/dAm0CzQADAAcAABMBNwEhARcBSQG7af4OAaT+D2kBugKr/TJGAqr9VkYCzgAABAAuAAACPwLNAAMABwALAA8AABMTNwMhAxcTAwMjAyMzNSMu4U//Aa//T+HJD2EOKM3NAqv+oTgBSf63OAFf/VUBaP6YHgAAAwAu/9MCLwLKAAMABwALAAATITUhBQEXAQEhNSFdAb3+QwGe/jNoAZn+KQHH/jkCjD4V/YdGApv9Qn4AAQAu//kAqgB1ADwAADc1LwwjIw8MFRUfDDMzPwwxqgECAgMEBAUFBQYGBgcGBgcGBgYFBQUEBAMCAgEBAgIDBAQFBQUGBgYHBgYHBgYGBQUFBAQDAgIBNwYHBgYGBQUFBAQDAgIBAQICAwQEBQUFBgYGBwYGBwYGBgUFBQQEAwICAQECAgMEBAUFBQYGBgcAAgAu/3kA0QCEADwAQAAANzUvDCMjDwwVFR8MMzM/DDEHBxc30QECAgMEBAQFBgYGBgYHBgcGBgYFBQUEBAMCAgEBAgIDBAQFBQUGBgYHBgcGBgYGBgUEBAQDAgIBeil6J0YGBwYGBgUFBQQEAwICAQECAgMEBAUFBQYGBgcGBgcGBgYFBQUEBAMCAgEBAgIDBAQFBQUGBgYHCaAeoAABAC4BGAEyAXwAAwAAEyE1IS4BBP78ARhkAAIALgA8AKYCEgA8AHkAABM1LwwjIw8MFRUfDDMzPwwxETUvDCMjDwwVFR8MMzM/DDGmAQICAwMEBQUFBgUHBgYGBgcFBgUFBQQDAwICAQECAgMDBAUFBQYFBwYGBgYHBQYFBQUEAwMCAgEBAgIDAwQFBQUGBQcGBgYGBwUGBQUFBAMDAgIBAQICAwMEBQUFBgUHBgYGBgcFBgUFBQQDAwICAQHWBgYHBQYFBQUEAwMCAgEBAgIDAwQFBQUGBQcGBgYGBwUGBQUFBAMDAgIBAQICAwMEBQUFBgUHBv6oBgYHBQYFBQUEAwMCAgEBAgIDAwQFBQUGBQcGBgYGBwUGBQUFBAMDAgIBAQICAwMEBQUFBgUHBgAAAgAu//4AqgK8AAMAQAAAEwMzAxM1LwwjIw8MFRUfDDMzPwwxThpwGiABAgIDBAQFBQUGBgYHBgYHBgYGBQUFBAQDAgIBAQICAwQEBQUFBgYGBwYGBwYGBgUFBQQEAwICAQK8/hYB6v2ABgcGBgYFBQUEBAMCAgEBAgIDBAQFBQUGBgYHBgYHBgYGBQUFBAQDAgIBAQICAwQEBQUFBgYGBwAAAwAuAAABKALHAAMABwALAAAhAyMDIzM1IxM3JwcBASE8ISfMzApyLX0CvP1EHgH4hyp9AAMALv/TAgwC0ABFAEkATQAAEz8MMx8MFQ8FFz8ELw4jDwwFARcBASE1IXwDBQYICQwMDg8QERESEhERERAPDQwLCQcGBAIBAwUGCANSBAoHBQIBAwYICw0PERIUFRYXGBgYGBgXFxUVExEQDQwJBgFf/qxaAUD+kwGQ/nACBBIREA8ODQ0KCQcGBAECBQYICQsNDQ8QEBAREBEQEA8PBC4IFxkZGRkZGRcXFRQSEA4MCgcFAwIEBwkLDRARExUWFxaM/rZYAV7+jX4AAAIALv+3AgYC3wBTAKcAABM/CR8NFQ8OIwcXPw01Lw4PCRMzHw0VDw4vCQcfCT8OLw4HhwkJCwwNDg8QEBAQEBAPDg0MCwkIBgUDAQIEBAcHCQkLDAwNDQ4ODg4EEhgZFxcWFBMQDwwKCAUDAgUHCQsODxESExQWFRcWFxYWFRQUEhAPDa8SDw8PDg0MDAoIBwYEAwECAwUGBwgKCgsMDA0ODg0ODg0NDAwLCgkIZgoQExQWGBkaGhsbGxoaGBcVExEODAkHBAECBAgJDQ4QExQVFxgYGRoXAlEQDAwLCQgGBQIBAQIFBggJCwwMDg4PDxAPDw8ODQ0MCgoJBwYFAwIBYwEBBAcJDA0QEhMVFhYYFxgXFxcVFBMREA0MCggFBAEBBAUICgwNEBER/tQBAwQGCAkKDAwNDg4ODw4PDg0NDAsLCQgIBQUDAgEBAgQFBwcJCgoMQREVFBIPDQoHBQIBBAYKCw8RExUWGBkaGhsaGhkYFxYTEhAODAkHBAIBAAIALgBCAlICZAA7AHcAAAEvDg8OFR8NPw0nDw0vDjU/DR8NFQJSAgYJCw0REhQWGBkaGhscGxsbGhkXFhUSEA4LCQUDBAYKDA8SFRYZGhsdHR4eHR0bGxgXFBIPDQkGBGQEBgcJCwsNDg8QEBESEREREREPDw4NDAsJBwYEAgIEBQgJDA0OEBESExQTFBMTEhEQDw0LCQgGAwIBXh0cGxoYFxUTEQ8MCQcEAQEEBwkMDxETFRcYGhscHR0cHRsbGRcVFBAOCwgFAQEFCAsOEBQVFxkbGx0cCxIREQ8PDQwLCQcGBAMBAQMEBgcJCwwNDw8RERISExISEhIQEA4NCwoHBQQBAQQFBwoLDQ4QEBISEhITAAAAAAAMAJYAAQAAAAAAAAAkAAAAAQAAAAAAAQAFACQAAQAAAAAAAgAHACkAAQAAAAAABAANADAAAQAAAAAABQADAD0AAQAAAAAABgANAEAAAwABBAkAAABIAE0AAwABBAkAAQAKAJUAAwABBAkAAgAOAJ8AAwABBAkABAAaAK0AAwABBAkABQAGAMcAAwABBAkABgAaAM1RZWxhbiAvIFNlYWxlZCBSYWRpYW5jZSBkaXNwbGF5IGZhY2VRZW5haFRpdGxpbmdRZW5haCBUaXRsaW5nMS4wUWVuYWgtVGl0bGluZwBRAGUAbABhAG4AIAAvACAAUwBlAGEAbABlAGQAIABSAGEAZABpAGEAbgBjAGUAIABkAGkAcwBwAGwAYQB5ACAAZgBhAGMAZQBRAGUAbgBhAGgAVABpAHQAbABpAG4AZwBRAGUAbgBhAGgAIABUAGkAdABsAGkAbgBnADEALgAwAFEAZQBuAGEAaAAtAFQAaQB0AGwAaQBuAGcAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlAAAAJAAlACYAJwAoACkAKgArACwALQAuAC8AMAAxADIAMwA0ADUANgA3ADgAOQA6ADsAPAA9ABEADwAQAB0ABAAUABUAFgATAAM=) format("truetype"); font-weight:normal; font-style:normal; }
+  @page { size: 152mm 229mm; margin: 19mm 18mm 21mm 18mm; }
+
+  :root{
+    --paper:#efe5cc;
+    --paper2:#e9ddbf;
+    --ink:#2c2316;
+    --ink-soft:#5b4a32;
+    --ink-faint:#897552;
+    --red:#8a2f24;
+    --rule:#7a6849;
+    --body:"Baskerville","Hoefler Text","Palatino Linotype","Palatino",Georgia,serif;
+    --display:"Bodoni 72","Didot","Big Caslon","Baskerville",serif;
+    --qenah:"Qenah","Bodoni 72","Didot",serif;
+    --caslon:"Big Caslon","Bodoni 72","Baskerville",serif;
+    --sc:"Bodoni 72 Smallcaps Book","Baskerville",serif;
+    --italic:"Cochin","Baskerville",serif;
+  }
+  *{ box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  html,body{ background:var(--paper); }
+  body{
+    margin:0; color:var(--ink);
+    font-family:var(--body); font-size:10.6pt; line-height:1.5;
+    text-rendering:optimizeLegibility;
+    font-feature-settings:"liga" 1,"dlig" 1,"onum" 1,"kern" 1;
+  }
+
+  /* ---- structural ---- */
+  .page{ break-after:page; }
+  .chapter{ break-before:page; }
+  .plate, .specimen-block, .register-entry{ break-inside:avoid; }
+  p{ margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto; text-indent:1.4em; }
+  p.opening{ text-indent:0; }
+  p.opening::first-letter{
+    float:left; font-family:var(--display); font-weight:600; font-size:3.5em; line-height:.74;
+    padding:.04em .09em 0 0; color:var(--red);
+  }
+  .nofirst{ text-indent:0; }
+
+  em, i{ font-family:var(--italic); font-style:italic; }
+  .sah{ font-style:italic; font-family:var(--italic); }
+  .red{ color:var(--red); }
+  .sc{ font-variant:small-caps; letter-spacing:.06em; }
+
+  /* ---- title page ---- */
+  .titlepage{ height:184mm; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; break-after:page; }
+  .device{ width:30mm; height:30mm; margin-bottom:7mm; }
+  .t-script{ width:74mm; height:20mm; margin:0 auto 3mm; display:block; }
+  .t-main{ font-family:var(--qenah); font-size:33pt; color:var(--red); letter-spacing:.04em; line-height:1.04; margin:2mm 0 0; text-transform:uppercase; }
+  .t-rule{ width:64mm; height:0; border:0; border-top:1.2px solid var(--rule); margin:6mm auto; position:relative; }
+  .t-sub{ font-family:var(--italic); font-style:italic; font-size:12.5pt; color:var(--ink-soft); max-width:104mm; line-height:1.42; margin:0 auto; }
+  .t-epi{ font-family:var(--italic); font-style:italic; font-size:12pt; margin:9mm auto 1.5mm; max-width:88mm; }
+  .t-epi-g{ font-size:8.4pt; color:var(--ink-faint); letter-spacing:.04em; }
+  .imprint{ font-family:var(--sc); font-variant:small-caps; font-size:9pt; letter-spacing:.07em; color:var(--ink-soft); line-height:1.85; margin-top:13mm; }
+  .imprint .big{ font-size:10pt; color:var(--ink); }
+
+  /* ---- chapter heads ---- */
+  .chap-orn{ width:46mm; height:8mm; display:block; margin:0 auto 5mm; }
+  .chap-num{ text-align:center; font-family:var(--sc); font-variant:small-caps; letter-spacing:.22em; font-size:9.5pt; color:var(--red); margin-bottom:2.5mm; }
+  .chap-title{ text-align:center; font-family:var(--qenah); font-size:16.5pt; line-height:1.14; letter-spacing:.03em; margin:0 0 1.5mm; color:var(--ink); text-transform:uppercase; }
+  .specimen-letters{ text-align:center; margin:9mm 0 4mm; }
+  .spec-row{ font-family:var(--qenah); text-transform:uppercase; font-size:29pt; letter-spacing:.07em; color:var(--ink); line-height:1.55; }
+  .spec-row.small{ font-size:16pt; letter-spacing:.05em; color:var(--red); margin-top:7mm; }
+  .chap-sub{ text-align:center; font-family:var(--italic); font-style:italic; font-size:10.5pt; color:var(--ink-soft); margin:0 0 7mm; }
+
+  h2.run-head{ font-family:var(--sc); font-variant:small-caps; letter-spacing:.14em; font-size:11pt; color:var(--ink); text-align:center; margin:8mm 0 3mm; font-weight:normal; }
+
+  /* ---- ornaments / breaks ---- */
+  .fleuron{ display:block; margin:6mm auto; width:34mm; height:7mm; }
+  .fleuron.small{ width:20mm; height:5mm; margin:5mm auto; }
+
+  /* ---- epigraph / quotations ---- */
+  blockquote{ margin:5mm 8mm; font-family:var(--italic); font-style:italic; font-size:10.6pt; line-height:1.5; text-align:center; color:var(--ink); }
+  blockquote .g{ font-style:normal; font-family:var(--sc); font-variant:small-caps; font-size:8pt; letter-spacing:.08em; color:var(--ink-faint); display:block; margin-top:1.5mm; }
+
+  /* ---- plates ---- */
+  .plate{ margin:7mm auto; text-align:center; }
+  .plate-frame{ display:inline-block; padding:5mm; border:1.4px solid var(--ink); outline:.6px solid var(--ink); outline-offset:1.6mm; background:var(--paper2); }
+  .plate svg{ display:block; }
+  .plate-cap{ font-family:var(--sc); font-variant:small-caps; letter-spacing:.12em; font-size:8.6pt; color:var(--red); margin-top:4mm; }
+  .plate-leg{ font-family:var(--italic); font-style:italic; font-size:8.8pt; color:var(--ink-soft); max-width:96mm; margin:1.5mm auto 0; line-height:1.4; text-align:center; }
+
+  /* ---- specimen / sample translations ---- */
+  .specimen-block{ margin:5mm 4mm; }
+  .specimen{ margin:3.5mm 0; padding-left:6mm; border-left:1px solid var(--rule); }
+  .specimen .s-sah{ font-family:var(--italic); font-style:italic; font-size:11.5pt; color:var(--ink); }
+  .specimen .s-glo{ font-family:var(--sc); font-variant:small-caps; font-size:7.6pt; letter-spacing:.05em; color:var(--ink-faint); margin:.6mm 0; }
+  .specimen .s-en{ font-size:10pt; }
+  .specimen .s-lbl{ font-family:var(--sc); font-variant:small-caps; font-size:7.6pt; letter-spacing:.14em; color:var(--red); }
+
+  /* ---- register ---- */
+  .register-entry{ margin:0 0 4.5mm; }
+  .register-entry .r-name{ font-family:var(--display); font-size:12.5pt; color:var(--ink); }
+  .register-entry .r-epi{ font-family:var(--italic); font-style:italic; font-size:9.5pt; color:var(--ink-soft); }
+  .register-entry .r-body{ font-size:10pt; text-indent:0; margin-top:1mm; }
+  .register-entry .r-meta{ font-family:var(--sc); font-variant:small-caps; font-size:8pt; letter-spacing:.05em; color:var(--ink-faint); margin-top:1mm; }
+
+  /* ---- colophon / final leaf ---- */
+  .final{ text-align:center; }
+  .final .red-hand{ font-family:var(--italic); font-style:italic; color:var(--red); font-size:12pt; margin-top:6mm; }
+  .colophon-note{ font-family:var(--sc); font-variant:small-caps; font-size:8.6pt; letter-spacing:.06em; color:var(--ink-soft); line-height:1.9; margin-top:8mm; }
+
+  .marginalia{ font-family:var(--italic); font-style:italic; font-size:9.4pt; color:var(--ink-soft); border-top:.6px solid var(--rule); border-bottom:.6px solid var(--rule); padding:2.5mm 0; margin:5mm 6mm; text-align:justify; }
+  .leadin{ font-family:var(--sc); font-variant:small-caps; letter-spacing:.05em; }
+</style>
+</head>
+<body>
+
+<!-- ===================== TITLE PAGE ===================== -->
+<section class="titlepage">
+  <svg class="device" id="device" viewBox="0 0 100 100"></svg>
+  <svg class="t-script" id="titleScript" viewBox="0 0 370 100"></svg>
+  <div class="t-main">The Codex<br>of Degrees</div>
+  <hr class="t-rule">
+  <div class="t-sub">Being a true account of the Radiance; of its descent into matter, mind, and the cooled world; of the order of its degrees; of the nature of the Wound; and of the iron that holds it — set down for the instruction of the Collegium.</div>
+  <div class="t-epi"><span class="sah">Seqá — šahár; šahár — naší.</span></div>
+  <div class="t-epi-g">to be wounded is to shine; to shine is to forget</div>
+  <div class="imprint">
+    Compiled by <span class="big">Iren Sahrwright</span>, Lector of Degrees<br>
+    Printed at the Collegium of the Settled Light · Veshpor<br>
+    Set in Veshpor Roman · cut by the house of Tash<br>
+    In the eight hundred and twelfth year of the Long Quiet
+  </div>
+</section>
+
+<!-- ===================== NOTE ON THE IMPRESSION ===================== -->
+<section class="page">
+  <svg class="chap-orn fleuron" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">A Note Before the Reading</div>
+  <h2 class="chap-title" style="font-size:15pt; margin-bottom:6mm;">Of this Impression, and the Hand it is Set in</h2>
+  <p class="opening">This book is pressed, not copied. Where the old scriptoria of the Conflagration laboured a year over a single leaf, the Collegium's iron press lays a thousand in a day — letters cut once in steel by the founder, struck into matrices, cast in type, and pressed under the weight of a screw upon dampened rag. It is a craft of the cooled world entire: iron, pressure, and a patient black ink of soot and oil. No Working touches it. That is the point of it.</p>
+  <p>The face is <span class="sah">Veshpor Roman</span>, cut for the press to be read by lamplight and to bear a hard impression without filling. The great letters and the rubricated initials are struck in oxide red, after the manner of the early presses, that the eye may find its station on the page. Of the elder <span class="sah">rayed hand</span> — the script in which the Workings were once written, and in which the laws of degree are still reckoned — only a little survives here: in the device above, in the titling, and in the plates, where the natural philosophy of the Collegium is set down in figures and proportions rather than in common letters, as is proper to it.</p>
+  <p>I have made the account plain. The reader who wishes the demonstrations at length will find them in the Collegium's larger volumes; here is the matter of it, and the figures, and such of the old tongue as cannot be put otherwise.</p>
+  <svg class="fleuron" viewBox="0 0 200 34"></svg>
+</section>
+
+<!-- ===================== I. THE ONE RADIANCE ===================== -->
+<section class="chapter">
+  <svg class="chap-orn" id="orn1" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">Chapter the First</div>
+  <h2 class="chap-title">Of the One Radiance</h2>
+  <div class="chap-sub">wherein it is shown that all things are radiance that has cooled</div>
+
+  <p class="opening">There is one light. Not a lamp, and not a god with a face, but a single condition older than the world: undivided, awake, and without end in its power to bring things forth. We name it <span class="sah">Šahír</span> — the Radiance, the Source. Everything the reader has ever touched is made of it.</p>
+  <p>The world is what comes to pass when that light <em>settles</em>. When radiance loses its motion and its waking, it hardens into fixed form, and we call the result matter. A stone is not the contrary of spirit. A stone is spirit that has ceased to move: a dead coal of the same fire that, in another place, is a mind.</p>
+  <p>This cooling is no fall and no punishment. It is liker to the way a single living seed becomes bone and leaf and nerve — one substance parting into many lesser and particular things. The cooled world is real, and worthy in itself. Yet it remembers; and in certain rare vessels, the memory may be torn open again. From that tearing comes every power and every grief that follows in this book.</p>
+
+  <div class="marginalia">A confession, set down for honesty: I write in a quiet century, when the wounded sleep under iron and the Working is a matter of histories. Let the reader who finds these pages know that I believed that chapter closed. — <span class="leadin">I. S.</span></div>
+</section>
+
+<!-- ===================== II. THE LADDER ===================== -->
+<section class="chapter">
+  <svg class="chap-orn" id="orn2" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">Chapter the Second</div>
+  <h2 class="chap-title">The Ladder of Degrees</h2>
+  <div class="chap-sub">of the seven rungs, and the floor whereon they stand</div>
+
+  <p class="opening">Between pure radiance and dead dust the world is one unbroken descent; yet the tongue fixes seven named <em>degrees</em>, the rungs of a ladder, the <span class="sah">Qenʾah</span>. And here the Collegium must correct a common error. The Ladder does not measure how much radiance a thing holds — for all things are radiance, and none holds less. It measures how much remains <em>unspent</em>: free, unsettled, with somewhere yet to fall.</p>
+  <p>Read it, then, as a well. To stand high upon it is to keep much slope, much potential, much power to change. To sink is to grow settled, fixed, finished. The most radiant rung that may yet live within a body is the third — <span class="sah">šehir</span>, the mind; and it is lifted, as the next chapter's figure shows, above its proper station. That lifting is the whole reason a mind may be opened where a stone may not.</p>
+  <p>The degrees, in their descent, are these: <span class="sah">Šahír</span>, the Source; <span class="sah">šahar</span>, the emanation, or living beam; <span class="sah">šehir</span>, the mind; <span class="sah">šohar</span>, the quickened, or living thing; <span class="sah">šuhor</span>, the wrought, that still holds a little light; and <span class="sah">šahrut</span>, the dust, fully cooled. Two limits bound the whole: the Source above, which is all slope and nothing at rest, and the Cinder below — <span class="sah">berzá</span>, iron — which is all rest and no slope, and of which a later chapter treats.</p>
+
+  <div class="plate">
+    <div class="plate-frame"><svg id="plateWell" width="330" height="248" viewBox="0 0 330 248"></svg></div>
+    <div class="plate-cap">Plate I. — The Ladder, drawn as a Well</div>
+    <div class="plate-leg">To descend is to roll toward the settled floor; the steepness at any point is the slope a Working may ride. At the floor sits <span class="sah">berzá</span>, the Cinder, where the line lies flat and nothing may be gripped.</div>
+  </div>
+
+  <h2 class="run-head">The Law of Ossification</h2>
+  <p class="nofirst">The Collegium states the law not in the manner of the reckoners of number, but as a proportion among the degrees, after the figures of the rayed hand. The radiance of each degree stands less than the degree above it, in even measure — save at the third, the mind, which is lifted by a small excess all its own. This excess the philosophers name the <span class="sah">anomaly of the third degree</span>; without it, no living thing could ever reach back toward the Source, and the world would stand forever dark.</p>
+
+  <div class="plate">
+    <div class="plate-frame"><svg id="plateLaw" width="330" height="210" viewBox="0 0 330 210"></svg></div>
+    <div class="plate-cap">Plate II. — The Law of Degrees, in the Rayed Hand</div>
+    <div class="plate-leg">Each sun bears fewer rays than the last, as radiance cools down the rungs; the third is marked with a lifted point, the anomaly of mind. Below, the proportion: as the Source stands to the Mind, so the Mind to the Dust.</div>
+  </div>
+</section>
+
+<!-- ===================== III. STARS ===================== -->
+<section class="chapter">
+  <svg class="chap-orn" id="orn3" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">Chapter the Third</div>
+  <h2 class="chap-title">Of the Stars, and the Visitants</h2>
+  <div class="chap-sub">that a star is a wound in the sky which never closed</div>
+
+  <p class="opening">If matter is cooled radiance, then a star is the place where the cooling never finished — an aperture, a standing wound in the heavens, older than any mind, through which the Source still pours undimmed. The nearest is <span class="sah">Šemmá</span>, our sun: no furnace of burning stuff, but a single and unthinkably vast mind, the most powerful window upon the Source beneath which the world will ever stand.</p>
+  <p>Rarely the solar mind puts forth a part of itself to walk the cooled world: the <span class="sah">Qadín</span>, the Visitants, radiant beings of the second degree, terrible and beautiful and not quite to be addressed as persons. The greater part of what we claim to know of the Radiance, we learned by watching them. The far night-stars — the <span class="sah">šemím</span> — are lesser and farther wounds; and some hold that each is a sun to some other world.</p>
+  <p>It was from the long study of <span class="sah">Šemmá</span> and the traces of the Qadín that an ancient philosopher first put the forbidden question — whether a wound that pours light might itself be <em>made</em>. From that question came the whole sorrow of the next chapter.</p>
+  <svg class="fleuron" viewBox="0 0 200 34"></svg>
+</section>
+
+<!-- ===================== IV. THE WOUND ===================== -->
+<section class="chapter">
+  <svg class="chap-orn" id="orn4" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">Chapter the Fourth</div>
+  <h2 class="chap-title">Of the Wound</h2>
+  <div class="chap-sub">the séqa, the toll, and the price of every Working</div>
+
+  <p class="opening">A <span class="sah">séqa</span> is a puncture cut into a thin-walled mind, opening upon the Fullness behind the world. Through it the raw Radiance may be drawn, and shaped by expression — by voice and by gesture — to make, to transform, and to awaken the latent light sleeping in cooled things. So a wounded one, a <span class="sah">seqál</span>, becomes for a time a small sun, and terrible.</p>
+  <p>But the passage tears. Every Working draws light through the séqa, and the drawing wounds further: it burns away self — memory, the parts of a person, pieces that do not return. This forfeit the tongue names the <span class="sah">qorbán</span>, the toll, an offering one did not choose to make. Rest lets the wound scar half-shut, but the lost does not come back, and the scar remains.</p>
+  <p>Open the wound too wide, too long, and it ceases to be a window and becomes the whole of the mind. Such a one is not slain but <em>effaced</em> — fused into the Source, unimaginably mighty, and no longer anyone. These the tongue calls the <span class="sah">Maḥúq</span>, the Effaced, and they are the great terror of the histories. The law of it is cruel and may be said in a breath:</p>
+
+  <blockquote>To be wounded is to shine; to shine is to forget; and to forget enough is to be unmade.<span class="g">seqá — šahár; šahár — naší</span></blockquote>
+
+  <div class="plate">
+    <div class="plate-frame"><svg id="plateWound" width="250" height="250" viewBox="0 0 250 250"></svg></div>
+    <div class="plate-cap">Plate III. — The Vessel and the Wound</div>
+    <div class="plate-leg">A mind figured as a sealed vessel; the séqa a fissure in its crown, through which the Radiance pours. The wider the rift, the greater the light — and the swifter the vessel empties of its self.</div>
+  </div>
+</section>
+
+<!-- ===================== V. IRON ===================== -->
+<section class="chapter">
+  <svg class="chap-orn" id="orn5" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">Chapter the Fifth</div>
+  <h2 class="chap-title">Of Iron, the Cinder</h2>
+  <div class="chap-sub">the one finished thing, and the breaking of it</div>
+
+  <p class="opening">A world made wholly of radiance can hold nothing that is truly empty; <em>dead matter</em> were a contradiction, as dry water is. Iron, then, is no absence of light. It is light that has <em>finished</em> — radiance fallen all the way to the floor of its own well, fully settled, with no slope left to ride and nothing latent to wake. It is the bottom of the Ladder, mirror to the Source above.</p>
+  <p>Hence its strange power over the Working. Everywhere else the seqál is a lever, spending a little self while the matter's own slope does the labour. Iron offers no slope; and being at the very minimum, it drinks what is poured near it, as water runs to a drain. Iron does not strive against the light. It <em>grounds</em> it. That is the whole of the dampening, and the whole reason this one substance, and no other, could ever cage a Working.</p>
+  <p>And it is got only from the sky. Iron is the floor of the furnace — the one ash a star makes solely by dying, when its fire can wring no further light from its heart and the aperture falls in upon itself. Ordinary cooling never reaches it, but yields only lumpish dust; true iron is forged in the death of an aperture, and falls as cinder. The iron-mounts that cage the Sealed are made, in the end, of dead stars.</p>
+
+  <h2 class="run-head">On the Breaking of Iron</h2>
+  <p class="nofirst">One cannot <em>awaken</em> iron, there being nothing in it to wake; one can only <em>re-author</em> it — drive radiance back up the well and build slope where there is none, against a sink that drains the climb the whole way. There is no leverage in it; one pays the full depth in self. This is why the Sealed lie under a <em>mountain</em>: the iron-mount is not a wall but a depth, a well so deep that to climb it swiftly enough to matter would spend more self than a mind contains. The lock is not that escape is impossible, but that it costs more than the prisoner has. Yet the cage holds three doors, and has so arranged things that the prisoner may afford but one.</p>
+
+  <p class="nofirst"><span class="sc">The first door, paid in self.</span> Open the wound to its width and break the iron in a single eruption. It may be done — and the one who does it walks out Effaced, the self left behind in the stone. From this come certain of the loose Maḥúq, who clawed from their tombs and left themselves within.</p>
+  <p class="nofirst"><span class="sc">The second door, paid in centuries.</span> The séqa never closes; a wound upon an infinite source must always seep, and the seal binds the Working, not the bleed. The iron drinks nearly all — yet a faint, ceaseless, single-directed trickle, across centuries, anneals one hair of un-finished iron back up off the floor. Not by power, but by patience. So the very punishment the Wardens built becomes the key, and the prison digests itself.</p>
+  <p class="nofirst"><span class="sc">The third door, paid in trust.</span> The well need only be shortened until a survivable Working may finish it — by a flaw in the stone, by Wardens grown idle, or by a companion who cannot Work at all, yet can do <em>mechanism</em>: thinning the iron from without with the cooled world's own craft, until the last span yields to a Working that leaves a self intact. Neither escapes alone.</p>
+
+  <p class="nofirst">The tongue had the word before the deed was needed. To force a settled thing back up the Ladder, against its nature, is marked by the inversion particle <span class="sah">men-</span>, “against the Ladder”; and so the breaking of iron is no common <span class="sah">qol</span>, but a <span class="sah">men-qol</span>, an against-Working, the rarest and most unnatural act the world permits.</p>
+
+  <div class="marginalia">Of iron I will say what comfort I took: I have stood in the vault of a Berzhár and felt the air go deaf, as a struck bell feels in a room with no music. Whatever stirs beneath the iron, the iron does not answer it. — <span class="leadin">I. S.</span></div>
+</section>
+
+<!-- ===================== VI. THE TONGUE ===================== -->
+<section class="chapter">
+  <svg class="chap-orn" id="orn6" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">Chapter the Sixth</div>
+  <h2 class="chap-title">The Tongue of Degrees</h2>
+  <div class="chap-sub">whose grammar is the cosmology itself</div>
+
+  <p class="opening">The old tongue, <span class="sah">Lešān-Šahír</span>, is built upon roots of consonants, as are its sisters; but it has this alone to itself, that the vowels poured into a root mark the word's degree upon the Ladder. One root names the same essence at every rung — radiant at the top, dust at the floor — so that to inflect a word is to walk it down the descent. Below, the root of light, <span class="sah">Š–H–R</span>, set out in the rayed hand, from Source to dust.</p>
+
+  <div class="plate">
+    <div class="plate-frame"><svg id="plateSpecimen" width="330" height="150" viewBox="0 0 330 150"></svg></div>
+    <div class="plate-cap">Plate IV. — A Specimen of the Rayed Hand</div>
+    <div class="plate-leg">The same three rays at every degree; the light-points sink down the stroke as the word cools. At the sixth the stroke is barred with iron — the mark of the finished, the Cinder.</div>
+  </div>
+
+  <p>And the verbs of it bear no past nor present, but mark instead the <em>aspect of light</em> — how luminous the deed is: whether it brings forth, or settles, or stands as fixed and timeless truth, or is drawn through a wound. This last is the grammar of the Working itself, and no common speaker dares it but in quotation and in curse. Here, then, are certain sayings, with their gloss, that the reader may hear the tongue:</p>
+
+  <div class="specimen-block">
+    <div class="specimen">
+      <div class="s-lbl">The epigraph of the wound</div>
+      <div class="s-sah">Seqá — šahár; šahár — naší.</div>
+      <div class="s-glo">wound · shine ; shine · forget</div>
+      <div class="s-en">To be wounded is to shine; to shine is to forget.</div>
+    </div>
+    <div class="specimen">
+      <div class="s-lbl">The first line of this codex</div>
+      <div class="s-sah">Pe-Šahír qanén pe-Qenʾah, wa Qelán šahrut-hú.</div>
+      <div class="s-glo">the-Radiance descends the-Ladder, and world dust-its</div>
+      <div class="s-en">The Radiance descends the Ladder, and the world is its dust.</div>
+    </div>
+    <div class="specimen">
+      <div class="s-lbl">A Warden's seal-formula</div>
+      <div class="s-sah">Be-berzá pe-qol ḥatám-ut; pe-ḥatím ló šahár.</div>
+      <div class="s-glo">by-iron the-voice is-sealed ; the-sealed-one not shine</div>
+      <div class="s-en">By iron the voice is bound; the Sealed does not shine.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VII. THE AGES ===================== -->
+<section class="chapter">
+  <svg class="chap-orn" id="orn7" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">Chapter the Seventh</div>
+  <h2 class="chap-title">The Ages of the World</h2>
+  <div class="chap-sub">how it was kindled, burned, and sealed</div>
+
+  <p class="opening">Four ages the histories number, and we live in the fourth. In the <span class="sc">Kindling</span>, from the study of Šemmá and the Qadín, came the unthinkable craft: that a mind might be wounded open of set purpose, and a human turned into a small sun. Veshná Anšaqár, the First Opener, stands at the head of that age. She sought to understand the light; the understanding was a technique; and the technique spread faster than any wisdom for the using of it.</p>
+  <p>In the <span class="sc">Conflagration</span>, the Radiance Wars, openers opened openers, and power compounded upon power. Cities were spoken into being and out of it by warring seqálim, and some among the combatants overshot into the Effaced and became weapons that no one owned. That age very near unmade the world.</p>
+  <p>In the <span class="sc">Sealing</span> came the caging. Toren Sealwright grasped the one fact that mattered — that iron drowns the light — and the wounded, who could not be safely slain, were bound across the eyes and lips, chained at the speaking hands, and buried under iron-mounts where no radiance comes. The Order of the Seal, the <span class="sah">Ḥatumín</span>, was founded to keep the wards for ever.</p>
+  <p>And in the <span class="sc">Long Quiet</span>, our own age, a new world was built over the tombs — which did not return to prophets and candles, but turned to the cooled world for its power: to iron, pressure, combustion, optics, and patient measure. An industrial calm, grown in the shadow of a magical apocalypse, and partly because of it. This very press is its child.</p>
+  <svg class="fleuron" viewBox="0 0 200 34"></svg>
+</section>
+
+<!-- ===================== VIII. REGISTER ===================== -->
+<section class="chapter">
+  <svg class="chap-orn" id="orn8" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">Chapter the Eighth</div>
+  <h2 class="chap-title">A Register of the Sealed</h2>
+  <div class="chap-sub">after the rolls of the Wardens of the Seal</div>
+
+  <p class="opening">A partial register follows, that the reader may know the chief among those who sleep beneath the iron — each a wounded one too perilous to slay and too perilous to free, bound and buried where no radiance reaches. They are not dead. They dream, and the dreaming heals them, slowly, into forgotten people.</p>
+  <svg class="fleuron small" viewBox="0 0 200 34"></svg>
+
+  <div class="register-entry">
+    <span class="r-name">The Sleeper of Berzhár</span> <span class="r-epi">— the Sealed of the Iron Mount</span>
+    <p class="r-body">Opened ages past by a creator whose name the Wardens struck from their rolls. Held among the deepest-wounded ever bound; the eruption of its waking is reckoned able to tear the fabric of a city. Its dreams, the wardens write, are <em>lightening</em>.</p>
+    <div class="r-meta">Degree of wound, unmeasured · Bound at eyes, lips, hands · Status, <span class="red">stirring</span></div>
+  </div>
+  <div class="register-entry">
+    <span class="r-name">Veshná Anšaqár</span> <span class="r-epi">— Petáḥ-Séqa, the First Opener</span>
+    <p class="r-body">Not sealed, but remembered: the philosopher who first cut the wound as craft. The tradition cannot decide whether to curse her or to weep for her. She loved the light more than she feared it, and so gave the world the Kindling.</p>
+    <div class="r-meta">Of the Kindling · Title, Opener-of-the-Wound · Status, long unmade</div>
+  </div>
+  <div class="register-entry">
+    <span class="r-name">Sēph the Unspeaking</span> <span class="r-epi">— a mind that overshot</span>
+    <p class="r-body">A great seqál of the Conflagration who opened too wide and too long, and climbed past the top of the Ladder into the Effaced. No longer a person; enormously mighty; and, it is feared, still abroad in the cooled world. A name given to children for a warning.</p>
+    <div class="r-meta">Degree, Effaced · Cannot be bound · Status, at large (?)</div>
+  </div>
+  <div class="register-entry">
+    <span class="r-name">Toren Sealwright</span> <span class="r-epi">— architect of the Sealing</span>
+    <p class="r-body">Not wounded — the one who caged the wounded. He understood iron when the prophets understood nothing, and founded the Order that keeps the seals still. The nearest thing the Long Quiet owns to a saint, and uneasy, the chronicles say, in the title.</p>
+    <div class="r-meta">Of the Sealing · Founder of the Ḥatumín · Status, honoured dead</div>
+  </div>
+</section>
+
+<!-- ===================== SPECIMEN OF THE TITLING ===================== -->
+<section class="chapter">
+  <svg class="chap-orn" id="ornSpec" viewBox="0 0 200 34"></svg>
+  <div class="chap-num">Of the Letters</div>
+  <h2 class="chap-title">A Specimen of the Titling</h2>
+  <div class="chap-sub">the hand cut for the great letters of this press</div>
+  <p class="opening">The titling of this codex is set in a letter the founders name <span class="sah">Qenʾah</span>, the Ladder — for its strokes are cut to <em>cool as they fall</em>: slight and radiant at the crown, gathering weight to a heavy foot, as radiance gathers into iron at the floor of its descent. It bears its serifs only below, where things settle; above, the letter stands open to the light. Here is the whole of it.</p>
+  <div class="specimen-letters">
+    <div class="spec-row">ABCDEFGHIJKLM</div>
+    <div class="spec-row">NOPQRSTUVWXYZ</div>
+    <div class="spec-row small">The Radiance descends the Ladder</div>
+  </div>
+</section>
+
+<!-- ===================== FINAL LEAF ===================== -->
+<section class="chapter final">
+  <svg class="chap-orn" id="ornEnd" viewBox="0 0 200 34" style="margin-top:30mm;"></svg>
+  <p class="nofirst" style="text-align:center; font-family:var(--italic); font-style:italic; font-size:11pt; color:var(--ink-soft); max-width:96mm; margin:6mm auto 0;">Here the Lector's codex ends. It was a careful book, written by a careful man in a quiet century — and it was wrong in one particular only, which was the gravest.</p>
+  <div class="red-hand">A later hand, in a different ink, has written across this leaf:<br>“<span class="sah">Pe-ḥatím šaqúm.</span> — The Sealed One wakes.”</div>
+  <svg class="device" id="deviceEnd" viewBox="0 0 100 100" style="margin:14mm auto 0;"></svg>
+  <div class="colophon-note">
+    Sefer-Qenát · The Codex of Degrees<br>
+    Collegium of the Settled Light · Veshpor · 812 of the Long Quiet<br>
+    An impression of the in-universe artifact
+  </div>
+</section>
+
+<script>
+"use strict";
+const SVGNS="http://www.w3.org/2000/svg";
+const INK="#2c2316", RED="#8a2f24", SOFT="#5b4a32";
+function E(tag,a,p){ const e=document.createElementNS(SVGNS,tag); for(const k in a) e.setAttribute(k,a[k]); if(p)p.appendChild(e); return e; }
+const cos=Math.cos, sin=Math.sin, PI=Math.PI;
+
+/* ---------- printer's device: rayed sun + ladder ---------- */
+function device(svg, col){
+  svg.innerHTML=""; const cx=50,cy=50;
+  for(let i=0;i<24;i++){ const a=i/24*2*PI; const o=i%2; const r1=o?20:22,r2=o?34:40;
+    E("line",{x1:cx+cos(a)*r1,y1:cy+sin(a)*r1,x2:cx+cos(a)*r2,y2:cy+sin(a)*r2,stroke:col,"stroke-width":o?.7:1.3,"stroke-linecap":"round"},svg); }
+  E("circle",{cx,cy,r:17,fill:"none",stroke:col,"stroke-width":1.3},svg);
+  E("circle",{cx,cy,r:13,fill:"none",stroke:col,"stroke-width":.6},svg);
+  // ladder through centre
+  E("line",{x1:cx-5,y1:cy-10,x2:cx-5,y2:cy+10,stroke:col,"stroke-width":1.1},svg);
+  E("line",{x1:cx+5,y1:cy-10,x2:cx+5,y2:cy+10,stroke:col,"stroke-width":1.1},svg);
+  for(let r=-7;r<=7;r+=3.5) E("line",{x1:cx-5,y1:cy+r,x2:cx+5,y2:cy+r,stroke:col,"stroke-width":.7},svg);
+}
+device(document.getElementById("device"), RED);
+device(document.getElementById("deviceEnd"), INK);
+
+/* ---------- title in the rayed hand (decorative) ---------- */
+(function(){
+  const svg=document.getElementById("titleScript"); if(!svg) return;
+  // a row of rayed glyphs spelling a flourish: S E F E R · Q E N A T as abstract rays
+  const word=[3,2,3,2,4, 0, 3,2,3,2,3]; // ray-fullness pattern, 0 = separator dot
+  const n=word.length, W=370, step=W/(n+1);
+  word.forEach((v,i)=>{
+    const x=step*(i+1), y0=18, y1=82;
+    if(v===0){ E("circle",{cx:x,cy:50,r:3,fill:RED},svg); return; }
+    E("line",{x1:x,y1:y0,x2:x,y2:y1,stroke:RED,"stroke-width":2.2,"stroke-linecap":"round"},svg);
+    const dots=v, span=(y1-y0)*0.5, top=50-span/2;
+    for(let k=0;k<dots;k++) E("circle",{cx:x,cy:top+ k*(span/(dots-1||1)),r:2.4,fill:RED},svg);
+    // small flare terminals (rays) top and bottom
+    E("line",{x1:x-4,y1:y0+3,x2:x+4,y2:y0+3,stroke:RED,"stroke-width":1},svg);
+  });
+})();
+
+/* ---------- ornaments / fleurons: rule with rayed centre ---------- */
+function fleuron(svg){
+  svg.innerHTML="";
+  const W=200,H=34,cx=W/2,cy=H/2;
+  // central small sun
+  for(let i=0;i<12;i++){ const a=i/12*2*PI; E("line",{x1:cx+cos(a)*5,y1:cy+sin(a)*5,x2:cx+cos(a)*9,y2:cy+sin(a)*9,stroke:INK,"stroke-width":.8,"stroke-linecap":"round"},svg); }
+  E("circle",{cx,cy,r:4,fill:"none",stroke:INK,"stroke-width":1},svg);
+  E("circle",{cx,cy,r:1.4,fill:INK},svg);
+  // tapering rules with terminal diamonds
+  [[-1],[1]].forEach(([s])=>{
+    const x0=cx+s*16, x1=cx+s*92;
+    E("line",{x1:x0,y1:cy,x2:x1,y2:cy,stroke:INK,"stroke-width":1},svg);
+    E("rect",{x:cx+s*92-3+(s<0?-0:0),y:cy-3,width:6,height:6,transform:`rotate(45 ${cx+s*92} ${cy})`,fill:INK},svg);
+    // small leaf curls
+    E("path",{d:`M ${cx+s*40} ${cy} q ${s*8} -7 ${s*16} 0`,fill:"none",stroke:INK,"stroke-width":.8},svg);
+    E("path",{d:`M ${cx+s*40} ${cy} q ${s*8} 7 ${s*16} 0`,fill:"none",stroke:INK,"stroke-width":.8},svg);
+  });
+}
+document.querySelectorAll(".fleuron, .chap-orn").forEach(fleuron);
+
+/* ---------- PLATE I: the well ---------- */
+(function(){
+  const svg=document.getElementById("plateWell"); if(!svg) return;
+  const x0=40,x1=304,yTop=24,yBot=196;
+  const hOf=t=>Math.pow(1-t,2.2);
+  const X=t=>x0+(x1-x0)*t, Y=h=>yBot+(yTop-yBot)*h;
+  // hatching under the curve (engraving shade)
+  for(let t=0.0;t<=1.0;t+=0.022){ const x=X(t), yc=Y(hOf(t)); E("line",{x1:x,y1:yc+2,x2:x,y2:yBot,stroke:INK,"stroke-width":.35,opacity:.5},svg); }
+  // axes
+  E("line",{x1:x0,y1:yBot,x2:x1,y2:yBot,stroke:INK,"stroke-width":1},svg);
+  E("line",{x1:x0,y1:yBot,x2:x0,y2:yTop,stroke:INK,"stroke-width":1},svg);
+  // curve
+  let d=""; for(let t=0;t<=1.001;t+=0.02){ d+=(d?"L":"M")+X(t).toFixed(1)+" "+Y(hOf(t)).toFixed(1)+" "; }
+  E("path",{d,fill:"none",stroke:INK,"stroke-width":1.7},svg);
+  // degree marks — staggered labels so the steep cluster doesn't collide
+  const M=[[0.02,"Šahír"],[0.16,"šahar"],[0.31,"šehir"],[0.50,"šohar"],[0.68,"šuhor"],[0.84,"šahrut"]];
+  M.forEach(([t,l])=>{ const x=X(t),y=Y(hOf(t)); E("circle",{cx:x,cy:y,r:2.6,fill:INK},svg);
+    let lx,ly,anc;
+    if(t<0.42){ lx=x-8; ly=y+3; anc="end"; }      // upper-left: labels to the left
+    else { lx=x; ly=y-9; anc="middle"; }           // flat foot: labels above the points
+    const tx=E("text",{x:lx,y:ly,"text-anchor":anc,"font-family":"Baskerville,serif","font-style":"italic","font-size":"8.5","fill":SOFT},svg); tx.textContent=l; });
+  // the Cinder, cross-hatched, at the floor
+  const ix=X(0.965), iy=yBot-9;
+  E("circle",{cx:ix,cy:iy,r:8,fill:"none",stroke:INK,"stroke-width":1.2},svg);
+  for(let k=-6;k<=6;k+=2){ E("line",{x1:ix-Math.sqrt(Math.max(0,64-k*k)),y1:iy+k,x2:ix+Math.sqrt(Math.max(0,64-k*k)),y2:iy+k,stroke:INK,"stroke-width":.4},svg); }
+  const it=E("text",{x:ix,y:iy-13,"text-anchor":"middle","font-family":"Baskerville,serif","font-style":"italic","font-size":"8","fill":INK},svg); it.textContent="berzá";
+  // axis legends
+  const a1=E("text",{x:(x0+x1)/2,y:yBot+15,"text-anchor":"middle","font-family":"Baskerville,serif","font-size":"7.5","fill":SOFT,"letter-spacing":"1.5"},svg); a1.textContent="DESCENT OF THE LADDER";
+  const a2=E("text",{x:x0-6,y:(yTop+yBot)/2,"text-anchor":"middle","font-family":"Baskerville,serif","font-size":"7.5","fill":SOFT,"letter-spacing":"1.5",transform:`rotate(-90 ${x0-6} ${(yTop+yBot)/2})`},svg); a2.textContent="UNSPENT RADIANCE";
+})();
+
+/* ---------- raymark: a sun-glyph whose rays thin with degree ---------- */
+function raymark(svg,cx,cy,deg,scale){
+  scale=scale||1;
+  const rays=[14,11,8,6,4,2][deg-1], len=[16,13,11,9,7,5][deg-1]*scale, r=6*scale;
+  for(let i=0;i<rays;i++){ const a=i/rays*2*PI - PI/2; E("line",{x1:cx+cos(a)*(r+1),y1:cy+sin(a)*(r+1),x2:cx+cos(a)*(r+len),y2:cy+sin(a)*(r+len),stroke:INK,"stroke-width":.9,"stroke-linecap":"round"},svg); }
+  E("circle",{cx,cy,r,fill:"none",stroke:INK,"stroke-width":1.1},svg);
+  E("circle",{cx,cy,r:1.5*scale,fill:INK},svg);
+  if(deg===3){ // the anomaly: a lifted point
+    E("circle",{cx,cy:cy-(r+len+5),r:1.8,fill:RED},svg);
+    E("line",{x1:cx,y1:cy-(r+len),x2:cx,y2:cy-(r+len+3),stroke:RED,"stroke-width":.8},svg);
+  }
+}
+function cinderMark(svg,cx,cy,scale){ scale=scale||1; const r=6*scale;
+  E("circle",{cx,cy,r,fill:"none",stroke:INK,"stroke-width":1.2},svg);
+  for(let k=-r+1;k<r;k+=2) E("line",{x1:cx-Math.sqrt(Math.max(0,r*r-k*k)),y1:cy+k,x2:cx+Math.sqrt(Math.max(0,r*r-k*k)),y2:cy+k,stroke:INK,"stroke-width":.4},svg);
+  E("line",{x1:cx-r-3,y1:cy,x2:cx+r+3,y2:cy,stroke:INK,"stroke-width":1.4},svg);
+}
+
+/* ---------- PLATE II: the law of degrees ---------- */
+(function(){
+  const svg=document.getElementById("plateLaw"); if(!svg) return;
+  // a clean descending stair of six suns, cooling as they fall
+  const n=6, x0=44, x1=292, y0=42, y1=120;
+  const labels=["Šahír","šahar","šehir","šohar","šuhor","šahrut"];
+  const pos=[];
+  for(let i=0;i<n;i++) pos.push([x0+(x1-x0)*(i/(n-1)), y0+(y1-y0)*(i/(n-1))]);
+  // the qen descent connectors
+  for(let i=0;i<n-1;i++){ const [ax,ay]=pos[i],[bx,by]=pos[i+1];
+    E("path",{d:`M ${ax+12} ${ay+7} Q ${(ax+bx)/2} ${(ay+by)/2+12} ${bx-12} ${by-7}`,fill:"none",stroke:INK,"stroke-width":.7,opacity:.85},svg); }
+  pos.forEach(([x,y],i)=>{ raymark(svg,x,y,i+1,0.8);
+    const t=E("text",{x:x,y:y+25,"text-anchor":"middle","font-family":"Baskerville,serif","font-style":"italic","font-size":"7.5","fill":SOFT},svg); t.textContent=labels[i]; });
+  // a thin rule, then the proportion: Source : Mind :: Mind : Dust
+  E("line",{x1:34,y1:150,x2:296,y2:150,stroke:INK,"stroke-width":.5,opacity:.45},svg);
+  const py=182; let px=70;
+  raymark(svg,px,py,1,0.56); px+=30; propSign(svg,px,py,1); px+=22;
+  raymark(svg,px,py,3,0.56); px+=34; propSign(svg,px,py,2); px+=32;
+  raymark(svg,px,py,3,0.56); px+=30; propSign(svg,px,py,1); px+=22;
+  raymark(svg,px,py,6,0.56);
+})();
+function propSign(svg,x,y,kind){ // 1 = single ratio (:) two dots ; 2 = proportion (::) four dots
+  const r=1.4;
+  E("circle",{cx:x,cy:y-3,r,fill:INK},svg); E("circle",{cx:x,cy:y+3,r,fill:INK},svg);
+  if(kind===2){ E("circle",{cx:x+7,cy:y-3,r,fill:INK},svg); E("circle",{cx:x+7,cy:y+3,r,fill:INK},svg); }
+}
+
+/* ---------- PLATE III: the vessel and the wound ---------- */
+(function(){
+  const svg=document.getElementById("plateWound"); if(!svg) return;
+  const cx=125,cy=140;
+  // an urn/vessel body
+  E("path",{d:"M 78 95 C 70 150 80 205 125 210 C 170 205 180 150 172 95 Z",fill:"none",stroke:INK,"stroke-width":1.4},svg);
+  // hatching inside lower vessel (the settled self)
+  for(let y=150;y<205;y+=4){ const w=40-(y-150)*0.15; E("line",{x1:cx-w,y1:y,x2:cx+w,y2:y,stroke:INK,"stroke-width":.3,opacity:.55},svg); }
+  // crown / rim
+  E("path",{d:"M 78 95 Q 125 78 172 95",fill:"none",stroke:INK,"stroke-width":1.4},svg);
+  // the fissure (séqa)
+  let d="M 125 84"; const segs=7,h=46;
+  for(let i=1;i<=segs;i++){ const yy=84+ (h)*(i/segs); const xx=125+ (sin(i*1.7)*11)*(i%2?1:-1); d+=" L "+xx.toFixed(1)+" "+yy.toFixed(1); }
+  E("path",{d,fill:"none",stroke:INK,"stroke-width":1.6,"stroke-linecap":"round"},svg);
+  // rays pouring up from the wound
+  for(let i=0;i<9;i++){ const a=-PI/2 + (i-4)/4*0.95; const len=34+ (i%2?8:0); E("line",{x1:125+cos(a)*8,y1:84+sin(a)*8,x2:125+cos(a)*(8+len),y2:84+sin(a)*(8+len),stroke:INK,"stroke-width":.8,"stroke-linecap":"round"},svg); }
+  // small radiance burst
+  E("circle",{cx:125,cy:84,r:4,fill:"none",stroke:INK,"stroke-width":.8},svg);
+  // ground line
+  E("line",{x1:60,y1:212,x2:190,y2:212,stroke:INK,"stroke-width":.7},svg);
+})();
+
+/* ---------- PLATE IV: specimen of the rayed hand (Š-H-R degrees) ---------- */
+(function(){
+  const svg=document.getElementById("plateSpecimen"); if(!svg) return;
+  const words=["Šahír","šahar","šehir","šohar","šuhor","šahrut"];
+  const n=6, W=330, step=W/(n+0.4), top=18, bot=104;
+  for(let i=0;i<n;i++){
+    const cx=step*(i+0.7);
+    const sealed=(i===5);
+    // three rays (Š H R)
+    [-9,0,9].forEach(dx=>{
+      E("line",{x1:cx+dx,y1:top,x2:cx+dx,y2:bot,stroke:INK,"stroke-width":1.8,"stroke-linecap":"round"},svg);
+      // degree dots: descend down the stroke as degree increases
+      const dy = top+10 + (bot-top-20)*(i/5);
+      const count = Math.max(1, 3-Math.floor(i/2));
+      for(let k=0;k<count;k++) E("circle",{cx:cx+dx,cy:dy+(k-(count-1)/2)*8,r:1.9,fill:INK},svg);
+    });
+    if(sealed){ E("line",{x1:cx-15,y1:(top+bot)/2,x2:cx+15,y2:(top+bot)/2,stroke:INK,"stroke-width":2.4},svg); }
+    const t=E("text",{x:cx,y:bot+22,"text-anchor":"middle","font-family":"Baskerville,serif","font-style":"italic","font-size":"9.5","fill":SOFT},svg); t.textContent=words[i];
+  }
+})();
+</script>
+</body>
+</html>

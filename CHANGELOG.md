@@ -4,6 +4,16 @@ Versioned snapshots of the shared instrument. The engine keeps evolving at the
 private table; each tagged version here is a coherent, playable whole. Sealed
 material (`worlds/*/gm/`, mode-B character interiors) is never included.
 
+## v0.1.5 — 2026-07-18
+
+- Qelán's scripture ships: `worlds/qelan/sources/` mirrors the worldbible,
+  the Sahíric language document, and *The Codex of Degrees* (with the Qenah
+  script assets), so a fork carries the world's physics with it. The vault
+  masters remain the editing copies; the publish flow refreshes the mirror.
+- `worlds/qelan/sources.md` rewritten to point at the mirror, with a Mode-A
+  reading note: *true* documents are the GM's physics — the game is better
+  if the Codex is what you know.
+
 ## v0.1.4 — 2026-07-18
 
 - `engine/BACKROOM.md`: fan-out size and cycle budget now read from
