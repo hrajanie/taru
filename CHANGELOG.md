@@ -4,6 +4,14 @@ Versioned snapshots of the shared instrument. The engine keeps evolving at the
 private table; each tagged version here is a coherent, playable whole. Sealed
 material (`worlds/*/gm/`, mode-B character interiors) is never included.
 
+## v0.1.4 — 2026-07-18
+
+- `engine/BACKROOM.md`: fan-out size and cycle budget now read from
+  `engine/settings.md` (shared default unchanged: 4–6 candidates); the
+  emotional-key rule generalized to any N.
+- `engine/settings.md` is now per-table: an instance sets its own minds and
+  budgets, and the publish flow leaves the shared default alone.
+
 ## v0.1.3 — 2026-07-18
 
 - `engine/WORLD.md` §Branching: the three fork scales written down, plus the

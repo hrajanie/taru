@@ -20,3 +20,5 @@ Which model runs which role. Hannu edits freely; the next boot or cycle picks it
 **Effort column** applies where the harness allows it. Claude Code subagents currently take a model but not an effort; the table takes both via `/model` and `/effort`; a future table-runner wrapper takes both per call. Record `?` rather than guess.
 
 **Reading the trial:** journal entries stamp who made what. If a Sonnet-made verdict or briefing reads as well as a Fable one, promote Sonnet to that role and bank the budget.
+
+*Per-table file: an instance tunes its own minds and budgets here; upstream updates never overwrite it.*
