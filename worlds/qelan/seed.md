@@ -18,7 +18,8 @@
 4. **The deliberately unwritten stays unwritten** until play itself insists — the puncture ritual, the reality of the Šahrún, what Šemmá wants.
 
 ## Where play could begin (offers, not rails)
-- **The waking** — the Ḥatúm beneath the Berzhár, from the first breath of unsealed lips. *(Default on `rebirth qelan`: the opening the sources most support. The played line entered just downstream of it — the waking itself stayed off-screen.)*
+*Default on `rebirth qelan`: the Sealed One walking out of cracked Berzhár, memoryless — scene 001's own opening image. Diegetically the story cannot start earlier: the waking burns away the memory of it, so play begins where his remembering does.*
+- **The waking** — the Ḥatúm beneath the Berzhár, from the first breath of unsealed lips.
 - **The inversion** — Hannu plays the companion who can do *mechanism* but not Working; the model plays the waking god who must be taught to be a person. The child raises the god, at the table.
 - **Veshpor, the Collegium** — a student of Iren Sahrwright finds the ossification curve misbehaving; the age's confidence develops its first crack.
 - **The Wardens** — the lapse from inside the Ḥatumín: idleness, doctrine, and a mountain that has begun to hum.
