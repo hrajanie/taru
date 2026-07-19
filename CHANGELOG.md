@@ -4,6 +4,13 @@ Versioned snapshots of the shared instrument. The engine keeps evolving at the
 private table; each tagged version here is a coherent, playable whole. Sealed
 material (`worlds/*/gm/`, mode-B character interiors) is never included.
 
+## v0.1.2 — 2026-07-18
+
+- README: "Your own instance" now offers three explicit doors — a world from
+  nothing, a world from your own pages (`sources.md` + `absorb sources`, with
+  the true / believed / draft statuses explained), and continuing Qelán from
+  scene 008. `setup.sh` next-steps updated to match.
+
 ## v0.1.1 — 2026-07-18
 
 - `engine/POETICS.md`: the seed credo — transferable story-craft principles

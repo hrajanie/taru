@@ -47,11 +47,23 @@ Instances are meant to be sovereign: your table, your worlds, your hidden state,
 
 1. **Make your own repo from this one.** On GitHub: **Use this template** → create your repo (private is sensible — your future `gm/` folders hold your story's secrets). A plain fork or a clone pushed to a fresh repo works the same.
 2. **Make it yours:** `./setup.sh "Your Name"` — replaces the operator's name in the engine and operating instructions (never in the Qelán play record), so the table addresses you. The engine files are now yours to edit; they are the constitution, and the constitution is meant to be amended by its player. Adjust pronouns in `engine/GM.md`/`engine/PLAYER.md` to taste.
-3. **Sit down.** Open the folder in Claude Code and say **`new world <name>`** — the birth ritual (`engine/WORLD.md`) asks for one image, one law, one wrongness, five tone words, and play begins from there. Sheets are born in play; nothing else is required.
+3. **Sit down.** Open the folder in Claude Code and pick a door:
 
-Or **continue Qelán from scene 008**: say **`prep`** and a fresh back room will read the canon, threads, and open questions and author its *own* hidden world — which will diverge from Hannu's sealed one immediately. Two players continuing from the same seven scenes will discover two different stories. That is not a limitation; it is the instrument working.
+**Door one — a world from nothing.** Say **`new world <name>`**. The birth ritual (`engine/WORLD.md`) asks for four things — one image, one law, one wrongness, five tone words — and play begins from there. Character sheets are born in play; nothing else is required.
+
+**Door two — a world from your own pages.** If you already have material — a draft, a worldbible, fragments of a novel — the engine is built to eat it. Say `new world <name>`, then write `worlds/<name>/sources.md`: a short table pointing at your documents (paths inside the repo or anywhere on disk), each marked with a status:
+
+- ***true*** — scripture. Physics; play never contradicts it.
+- ***believed*** — an in-world text. It binds what people think, not what is; the gap between believed and true is the GM's playground.
+- ***draft*** — rough scenes, sketches, fragments. Quarry: a soft pre-plot the GM mines for places, people, and beats, and that play freely retcons. Playing *through* a draft is the point — what survives contact becomes canon.
+
+Then say **`absorb sources`** — the table reads the targets and proposes updates to the seed, the penumbra, and the open questions; scene-shaped drafts become unplayed scene seeds. (`worlds/qelan/sources.md` is the worked example of the format.)
+
+**Door three — continue Qelán from scene 008.** Say **`prep`** first: a fresh back room will read the canon, threads, and open questions and author its *own* hidden world — which diverges from Hannu's sealed one immediately. Then **`scene in qelan`**. Two players continuing from the same seven scenes will discover two different stories. That is not a limitation; it is the instrument working.
 
 Requirements: [Claude Code](https://claude.com/claude-code) (or any agent harness that reads `AGENTS.md`). No other dependencies — the folder is the game.
+
+If you play, Hannu would love to hear how it went — open an issue on this repo, or bring him the tale directly.
 
 ## Branching
 
