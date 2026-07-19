@@ -25,6 +25,13 @@ worlds/<name>/
 ## Birthing a world ("new world <name>")
 Ask for — or derive from whatever Hannu gives — the seed: **one image** (what you'd see on the cover), **one law** (the physics that makes this world itself), **one wrongness** (what is already broken or beginning), **five tone words**. Create the folder and empty files; write an initial state card ("no scenes played; …"). Do not create character sheets — sheets are born in play.
 
+## Branching
+A world forks at three scales: a whole **instance** (a fork of the repo — sovereign, never merged), a **line** (a git branch or worktree carrying an alternate continuity), and a **what-if** (`worlds/<w>/branches/<name>/` with its own copies of the mutable files and its own scenes numbered from the fork point; seed, sources, and questions inherit from trunk).
+
+And a world can be **rewound**: everything except `seed.md`, `sources.md`, and the transcripts is derived state, so any earlier table can be rebuilt. On `branch <world> from scene NNN` — always on a fresh line, never in place on trunk — set aside the scenes past NNN, prune every entry cited past NNN from canon, threads, penumbra, retcons, and the sheets' observed truths, regenerate the state card from what remains, and let `prep` author a fresh hidden world. Keep `voice.md` whole: its rulings are craft, not plot. On `rebirth <world>`, keep only seed and sources — the world returns to the morning before its first scene, with any unplayed openings still standing.
+
+Stories don't merge; ideas do. Harvest a dead branch's inventions into `ideas.md` with provenance, and let prep respend them.
+
 ## Precedence
 1. **Scripture is physics.** If `sources.md` names sources marked *true*, play never contradicts them; only Hannu edits scripture.
 2. **In-world documents may lie.** A source marked *believed* (an in-universe text) binds what NPCs think, not what is true. The gap between believed and true is the GM's playground.

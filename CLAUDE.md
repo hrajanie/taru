@@ -11,6 +11,7 @@ Design backlog and status live in the vault: `~/penny-one/projects/writing/taru/
 - **`prep`** — run the back-room cycle by hand (`engine/BACKROOM.md`: reconcile → fan out → critique → brief). Runs itself after every distill; manual is for recovery or a fresh start.
 - **`study`** — the side door: worldbuilding talk with the back room outside any scene (names, magic, register). It warns before touching a live mystery. Mid-scene it opens as an interlude: the scene pauses, the study's output routes as proposals, and play resumes on a marker.
 - **`new world <name>`** — per `engine/WORLD.md`.
+- **`branch <world> from scene <NNN>`** / **`rebirth <world>`** — rewind on a fresh line per `engine/WORLD.md` §Branching (derived files rebuilt from the surviving transcripts; rebirth keeps only seed + sources), then `prep`.
 - **`prose <scene>`** — per `engine/PROSE.md` (currently a seam awaiting the style module).
 - **`absorb sources`** — in a world with `sources.md`: re-read its targets, propose updates to seed / penumbra / questions.
 

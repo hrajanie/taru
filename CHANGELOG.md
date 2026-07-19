@@ -4,6 +4,14 @@ Versioned snapshots of the shared instrument. The engine keeps evolving at the
 private table; each tagged version here is a coherent, playable whole. Sealed
 material (`worlds/*/gm/`, mode-B character interiors) is never included.
 
+## v0.1.3 — 2026-07-18
+
+- `engine/WORLD.md` §Branching: the three fork scales written down, plus the
+  rewind rule — a world's derived state can be rebuilt from its transcripts,
+  so play can branch from any scene (`branch <world> from scene NNN`) or from
+  the bare seed (`rebirth <world>`). Commands added to CLAUDE.md / AGENTS.md;
+  README door three extended.
+
 ## v0.1.2 — 2026-07-18
 
 - README: "Your own instance" now offers three explicit doors — a world from
