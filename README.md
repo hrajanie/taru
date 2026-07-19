@@ -49,7 +49,9 @@ Instances are meant to be sovereign: your table, your worlds, your hidden state,
 2. **Make it yours:** `./setup.sh "Your Name"` — replaces the operator's name in the engine and operating instructions (never in the Qelán play record), so the table addresses you. The engine files are now yours to edit; they are the constitution, and the constitution is meant to be amended by its player. Adjust pronouns in `engine/GM.md`/`engine/PLAYER.md` to taste.
 3. **Sit down.** Open the folder in Claude Code and pick a door:
 
-**Door one — a world from nothing.** Say **`new world <name>`**. The birth ritual (`engine/WORLD.md`) asks for four things — one image, one law, one wrongness, five tone words — and play begins from there. Character sheets are born in play; nothing else is required.
+**Door one — Qelán, from the beginning** *(the recommended first play)*. Say **`rebirth qelan`**. The world returns to the morning before its first scene and opens on the same image the played line began with: **the Sealed One walking out of cracked Berzhár, with no memory** (the seed marks this default — diegetically the story can't start earlier, since the waking burns away the memory of it; play begins where his remembering does). A fresh back room authors its *own* hidden world, so your saga and Hannu's share only their first breath and diverge by the second turn. The world's scripture isn't in this repo, so your line plays from the seed alone — the hidden world is your table's invention all the way down.
+
+Prefer to inherit the played history instead? Say **`prep`**, then **`scene in qelan`** to continue from scene 008 — or **`branch qelan from scene <NNN>`** to rewind anywhere between (`engine/WORLD.md` §Branching). Two players from the same transcripts will discover two different stories; that is the instrument working.
 
 **Door two — a world from your own pages.** If you already have material — a draft, a worldbible, fragments of a novel — the engine is built to eat it. Say `new world <name>`, then write `worlds/<name>/sources.md`: a short table pointing at your documents (paths inside the repo or anywhere on disk), each marked with a status:
 
@@ -59,9 +61,9 @@ Instances are meant to be sovereign: your table, your worlds, your hidden state,
 
 Then say **`absorb sources`** — the table reads the targets and proposes updates to the seed, the penumbra, and the open questions; scene-shaped drafts become unplayed scene seeds. (`worlds/qelan/sources.md` is the worked example of the format.)
 
-**Door three — continue Qelán from scene 008.** Say **`prep`** first: a fresh back room will read the canon, threads, and open questions and author its *own* hidden world — which diverges from Hannu's sealed one immediately. Then **`scene in qelan`**. Two players continuing from the same seven scenes will discover two different stories. That is not a limitation; it is the instrument working.
+**Door three — a world from nothing.** Say **`new world <name>`**. The birth ritual (`engine/WORLD.md`) asks for four things — one image, one law, one wrongness, five tone words — and play begins from there. Character sheets are born in play; nothing else is required.
 
-You don't have to pick up where the played line left off, either. A world can be rewound to any scene: say **`branch qelan from scene 001`** and the table sets aside the later transcripts, rebuilds the world files from what remains, and `prep` authors a fresh hidden world from there (`engine/WORLD.md` §Branching). Or go all the way back — **`rebirth qelan`** returns the world to the morning before its first scene. The default opening is the same image the played line began with: **the Sealed One walking out of cracked Berzhár, with no memory**. Diegetically the story can't start earlier — the waking burns away the memory of it, so play begins where his remembering does. Two lines from the same first image will diverge by the second turn, and the seed lists other doors besides.
+Honesty about the doors: the first is the proven one — the seven played scenes came through that table. The other two are untested by anyone but the author (Hannu suspects the sources door will open smoothly). If you take one, your play is data; he wants to hear about it either way.
 
 Requirements: [Claude Code](https://claude.com/claude-code) (or any agent harness that reads `AGENTS.md`). No other dependencies — the folder is the game.
 
